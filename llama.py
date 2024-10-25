@@ -3,16 +3,14 @@
 # In this section, we set the user authentication, user and app ID, model details, and the URL of 
 # the text we want as an input. Change these strings to run your own example.
 ######################################################################################################
+import os
 
-# Your PAT (Personal Access Token) can be found in the Account's Security section
-PAT = 'ac4aca84cb104502927e49a201eb1510'
-# Specify the correct user_id/app_id pairings
-# Since you're making inferences outside your app's scope
-USER_ID = 'saikrishna'
-APP_ID = 'app1'
-# Change these to whatever model and text URL you want to use
-WORKFLOW_ID = 'workflow-5f3885'
-TEXT_FILE_URL = 'https://samples.clarifai.com/negative_sentence_12.txt'
+# Fetch environment variables
+PAT = os.getenv('PAT')
+USER_ID = os.getenv('USER_ID')
+APP_ID = os.getenv('APP_ID')
+WORKFLOW_ID = os.getenv('WORKFLOW_ID')
+TEXT_FILE_URL = os.getenv('TEXT_FILE_URL')
 
 ############################################################################
 # YOU DO NOT NEED TO CHANGE ANYTHING BELOW THIS LINE TO RUN THIS EXAMPLE
